@@ -1,0 +1,79 @@
+<html>  
+<head>   
+   
+<meta charset="utf-8">
+<script type="text/javascript" src="{{ url_for('static', filename='js files/validate.js') }}"></script>
+<style>
+    
+    body{  
+           margin: 30;
+           padding: 0;
+        
+           background-size: cover;
+           background-position: center;
+           font-family: sans-serif;
+           color: white;
+           background-image:url('https://cyfuture.com/provideyourgst/assets/img/backgrounds/1@2x.jpg'); 
+    }  
+    h1
+    {
+        font-size:40px;
+        color: black;
+        background-color: white;
+    }
+    
+    </style>
+   
+</head> 
+ 
+<body>  
+    
+
+<div class="container">
+    
+    <center><h1>REGISTRATION FORM</h1></center>
+    <form action="{{ url_for("home")}}" method="post"></form>
+       
+    <form action="{{ url_for("next")}}" method="post"></form>
+    <form name="Registration" id="Registrationform" action= "{{ url_for("next")}}" onsubmit="completevalidate()" method="get">
+ <hr>     
+<label> First Name: </label>         
+<input type="text" name="First_name" pattern="[A-Za-z]+" required/> <br> <br> <span id="firstname"> </span> 
+<label> Last Name: </label>         
+<input type="text" name="Last_name"  pattern="[A-Za-z]+" required/> <br> <br> <span id="lastname"> </span> 
+  
+
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>Gender:</td><br><br>
+<td>
+<input type="radio" name="Gender" value="Male" /> Male<br>
+<input type="radio" name="Gender"value="Female"/> Female
+</td>
+</tr>
+ <br>
+ <br>
+<label>   
+Phone Number:  
+</label>  
+<input type="text" name="country code"  value="+91" size="2"/>   
+<input type="text" name="phone" pattern="[789][0-9]{9}" required/> <br> <br>  <span id="phonenumber_msg"> </span>
+Address:  
+<br>  
+<textarea cols="80" rows="5"name="address" value="address" required> 
+</textarea> <span id="a_address"> </span> 
+<br> <br>  
+Email:  
+<input type="email" id="e_mail" name="email" required/> <br> 
+<br> <br>  <span id="email_msg"> </span>  
+        
+        
+        <input type="submit" value="SUBMIT" />
+    
+        
+    
+         
+</form>
+    </div>   
+</body>  
+</html>  

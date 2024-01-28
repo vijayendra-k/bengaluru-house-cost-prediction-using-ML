@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<title>Registration Form</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='js files/display.js') }}" async ></script>
+    <style>
+        body{  
+           margin: 30;
+           padding: 0;
+        
+           background-size: cover;
+           background-position: center;
+           font-family: sans-serif;
+           color: white;
+           background-image:url('https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/12/housing_predictions.jpg'); 
+    }  
+        
+        
+        h4
+        {
+            
+            text-align:left;
+            font-size:25px;
+        }
+        
+        h5
+        {
+            
+            text-align:right;
+            font-size:25px;
+        }
+        
+        h10
+        {
+          font-size: 38px;
+          color:black;
+          background-color:white;
+        }
+    </style>
+    
+
+
+</head>
+ 
+<body>
+
+
+ 
+
+    
+ <form name="Registration" id="Registrationform" action= "{{ url_for("next")}}"  method="get"> 
+     <h10> <center><span id="succeeMessage"> </span> </center></h10>
+    </form>
+    
+
+    <div style = "position:absolute;left:80px; top:20px"><h4><a href={{url_for('back')}}>BACK</a></h4> 
+    </div>
+        
+       <div style = "position:absolute;right:80px; top:20px"> <h5><a href={{url_for('continued')}}>CONTINUE</a></h5>
+    </div>
+
+       
+</body>
+</html>
